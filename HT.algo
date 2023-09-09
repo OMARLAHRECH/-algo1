@@ -1,0 +1,44 @@
+ALGORITHM Hash-Table
+VAR
+    set1  : ARRAY_OF INTEGER [10];
+    set2  : ARRAY_OF INTEGER [10];
+    set_keys : ARRAY_OF INTEGER [20];
+    ht : HASH_TABLE<INTEGER,INTEGER>
+    i  : INTEGER
+    count : INTEGER := 1
+    sum : INTEGER := 0
+BEGIN
+    //remplisage set1 ; set2
+    //remplisage HT from set1
+    FOR i FROM 0 TO set1.length STEP 1  DO
+        IF (ht.lookup(set1[i]) = false) THEN
+            ht.insert(set1[i],count)
+        ELSE
+            ht.insert(set1[i] , count+1)
+        END_IF
+    END_FOR
+    //remplisage HT from set2
+    FOR i FROM 0 TO set2.length STEP 1  DO
+        IF (ht.lookup(set2[i]) = false) THEN
+            ht.insert(set2[i],count)
+        ELSE
+            ht.insert(set2[i] , count+1)
+        END_IF
+    END_FOR
+
+    set_keys := ht.getKeys()
+
+    FOR i FROM 0 TO set_keys.length STEP 1  DO
+        IF (ht.get(set-keys[i]) = 1) THEN
+            sum := sum + set_keys[i]
+        END_IF
+    END_FOR
+
+    write(sum)
+
+
+
+
+
+
+END

@@ -1,0 +1,36 @@
+ALGORITHM str-Counter
+VAR
+    str : STRING[50]
+    str_len : INTEGER := 0
+    wrl_len : INTEGER := 0
+    voy_len : INTEGER := 0
+    i : INTEGER := 0
+BEGIN
+    
+    FOR i FROM 0 TO i = "." STEP step 1 DO
+        write("enter a character")
+    END_FOR
+
+    read (str)
+    
+    
+    
+    
+    
+    WHILE (str[i] <> ".") DO
+        str_len := str_len +1 
+         
+        IF (str[i] = " ") THEN
+            wrl_len = wrl_len +1
+        END_IF
+
+        IF (str[i] = "a" "i" "o" "e" "u" "y") THEN
+            voy_len = voy_len +1
+        END_IF
+
+        i++
+
+
+
+    END_WHILE
+END
